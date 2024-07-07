@@ -24,6 +24,7 @@ ARP reply packets
 Mandatory or optional arguments to long options are also mandatory or optional
 for any corresponding short options.
 ```
+Can be run without arguments `./arp_scanner`
 
 #### Configured parameters:
 - batch size - batch of IPv4 addresses for ARP probe sending
