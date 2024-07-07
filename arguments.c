@@ -32,8 +32,8 @@ int parse_args(int argc, char** argv) {
 			.sending_interval=4
 	};
 	struct argp_option opts[3] = {
-			{ .name="batch", .key='b', .arg="32", .flags=0, .doc="addresses batch size."},
-			{ .name="sending_interval", .key='i', .arg="4", .flags=0, .doc="Pause before sending batch (sec)."},
+			{ .name="batch", .key='b', .arg="32", .flags=0, .doc="Addresses batch size"},
+			{ .name="sending_interval", .key='i', .arg="4", .flags=0, .doc="Pause before sending batch (sec)"},
 			{ 0 }
 	};
 	struct argp argp = {
