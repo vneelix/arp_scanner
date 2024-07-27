@@ -10,8 +10,9 @@ make
 ```
 
 ## Usage
+Note, for RAW socket need have the `CAP_NET_RAW` capability. To add - `sudo setcap cap_net_raw,cap_net_admin=eip ./your_exeutable`.
 ```bash
-./arp_scanner --help                                                       ✔ 
+./arp_scanner --help 
 Usage: arp_scanner [OPTION...]
 ARP subnet scanner. Send ARP probe packet to all addresses in subnet and wait
 ARP reply packets

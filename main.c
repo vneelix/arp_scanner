@@ -18,6 +18,10 @@ int main(int argc, char *argv[]) {
 	}
 
 	char* interface_name = select_interface();
+	if (interface_name == NULL) {
+		perror("Interface not selected");
+		exit(-1);
+	}
 
 	interface_t interface;
 	if (get_interface(interface_name, &interface) != 0) {
