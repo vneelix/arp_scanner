@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.28)
 project(arp_listener C)
 
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_COMPILER "gcc")
-set(CMAKE_CXX_FLAGS_RELEASE "-O2")
+set(CMAKE_CXX_FLAGS_RELEASE "-O2 -Wall -Wextra")
 
 add_executable(arp_scanner
         main.c

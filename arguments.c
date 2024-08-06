@@ -3,9 +3,11 @@
 struct arguments arguments;
 
 static error_t parse_opt(int key, char *arg, struct argp_state *state) {
+	long int batch;
+	long int interval;
 	switch (key) {
 		case 'b':
-			long batch = strtol(arg, NULL, 10);
+			batch = strtol(arg, NULL, 10);
 			if (batch <= 0 || batch > UINT_MAX) {
 				printf("Batch size must be uint, current: %s", arg);
 				return -1;
@@ -13,7 +15,7 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state) {
 			arguments.batch_size = batch;
 			break;
 		case 'i':
-			long interval = strtol(arg, NULL, 10);
+			interval = strtol(arg, NULL, 10);
 			if (interval <= 0 || interval > UINT_MAX) {
 				printf("Interval must be uint, current: %s", arg);
 				return -1;

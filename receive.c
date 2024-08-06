@@ -64,7 +64,7 @@ void receive_ARP(interface_t* interface) {
 	for (; ;) {
 		if (recv(socket_fd, rb, 128, 0) == -1) {
 			if (errno == EAGAIN) {
-				if (atomic_load((int*)&broadcast_finished) == 1) {
+				if (atomic_load((atomic_int*)&broadcast_finished) == 1) {
 					close(socket_fd);
 					return;
 				}

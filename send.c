@@ -64,7 +64,7 @@ int send_ARP_probe_range_subnet(interface_t* interface, uint32_t bulk_size, time
 		}
 	}
 
-	atomic_exchange((int*)&broadcast_finished, 1);
+	atomic_exchange((atomic_int*)&broadcast_finished, 1);
 	close(socket_fd);
 
 	return 0;

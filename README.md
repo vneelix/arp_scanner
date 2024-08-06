@@ -10,7 +10,7 @@ make
 ```
 
 ## Usage
-Note, for RAW socket need have the `CAP_NET_RAW` capability. To add - `sudo setcap cap_net_raw,cap_net_admin=eip ./your_exeutable`.
+Note, for RAW socket need have the `CAP_NET_RAW` capability. To add - `sudo setcap cap_net_raw,cap_net_admin=eip ./arp_scanner`.
 ```bash
 ./arp_scanner --help 
 Usage: arp_scanner [OPTION...]
